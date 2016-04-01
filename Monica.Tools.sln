@@ -5,6 +5,10 @@ VisualStudioVersion = 14.0.24720.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monica.Tools", "Monica.Tools\Monica.Tools.csproj", "{FCB405AD-0146-499D-AA07-A3EA28124104}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monica.Common", "Monica.Common\Monica.Common.csproj", "{75EF61A1-F4FB-44D3-8E18-40499808FCC5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Monica.Quant", "Monica.Quant\Monica.Quant.csproj", "{3470C116-0BF8-4354-B2EB-156CC37253D9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{FCB405AD-0146-499D-AA07-A3EA28124104}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FCB405AD-0146-499D-AA07-A3EA28124104}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FCB405AD-0146-499D-AA07-A3EA28124104}.Release|Any CPU.Build.0 = Release|Any CPU
+		{75EF61A1-F4FB-44D3-8E18-40499808FCC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{75EF61A1-F4FB-44D3-8E18-40499808FCC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{75EF61A1-F4FB-44D3-8E18-40499808FCC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{75EF61A1-F4FB-44D3-8E18-40499808FCC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3470C116-0BF8-4354-B2EB-156CC37253D9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3470C116-0BF8-4354-B2EB-156CC37253D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3470C116-0BF8-4354-B2EB-156CC37253D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3470C116-0BF8-4354-B2EB-156CC37253D9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

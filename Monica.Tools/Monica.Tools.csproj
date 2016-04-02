@@ -54,6 +54,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="Data\MostActiveTickers.csv" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Monica.Common\Monica.Common.csproj">

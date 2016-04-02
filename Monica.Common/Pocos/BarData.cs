@@ -194,10 +194,10 @@ namespace Monica.Common.Pocos
             };
         }
 
-        public static BarData[] GetBarDatas(IEnumerable<TickData> tickDatas, Periodicity periodicity)
+        public static BarData[] GetBarDatas(IEnumerable<TickData> tickDatas, int barSize)
         {
             return
-                tickDatas.GroupBy(tick => GetForwrdBarDataTime(tick.Time, periodicity))
+                tickDatas.GroupBy(tick => GetForwrdBarDataTime(tick.Time, barSize))
                     .Select(g =>
                     {
                         return new BarData
@@ -216,12 +216,12 @@ namespace Monica.Common.Pocos
                     .ToArray();
         }
 
-        private static DateTime GetForwrdBarDataTime(DateTime time, Periodicity periodicity)
+        private static DateTime GetForwrdBarDataTime(DateTime time, int barSize)
         {
-            if (time.Ticks%((int) periodicity*TimeSpan.TicksPerSecond) > 0)
+            if (time.Ticks%((int)barSize * TimeSpan.TicksPerSecond) > 0)
                 return
-                    time.AddTicks((int) periodicity*TimeSpan.TicksPerSecond -
-                                  time.Ticks%((int) periodicity*TimeSpan.TicksPerSecond));
+                    time.AddTicks(barSize * TimeSpan.TicksPerSecond -
+                                  time.Ticks%((int)barSize * TimeSpan.TicksPerSecond));
             return time;
         }
 

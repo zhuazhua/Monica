@@ -12,10 +12,9 @@ namespace Monica.Tools
 {
     class Program
     {
-        private static ILog _logger;
+        private static readonly ILog Logger = LogManager.GetLogger("Monica.Tools");
         public static int Main(string[] args)
         {
-            _logger = LogManager.GetLogger("Monica.Tools");
             try
             {
                 var options = new Options();
@@ -38,17 +37,18 @@ namespace Monica.Tools
             }
             catch (Exception ex)
             {
-                _logger.Error(ex.Message, ex);
+                Logger.Error(ex.Message, ex);
                 return -1;
             }
             return 0;
         }
 
-        private static void GenerateBarDatas(string inDir,string outDir,int barSize)
+        public static void GenerateBarDatas(string inDir,string outDir,int barSize)
         {
             var inDirInfo = new DirectoryInfo(inDir);
             foreach (var file in inDirInfo.EnumerateFiles("*.csv", SearchOption.AllDirectories))
             {
+                Logger.Info($"Process {file.FullName}");
                 var ticker = TickerHelper.GetTickerByFilename(file.Name);
                 var date = file.Directory.Name;
                 var tickDatas = File.ReadAllLines(file.FullName).Select(l => TickData.ParseFromCsv(l, date, ticker)).ToArray();
@@ -60,13 +60,14 @@ namespace Monica.Tools
             }
         }
 
-        private static void GenerateBackAdjustDatas(string inDir, string outDir)
+        public static void GenerateBackAdjustDatas(string inDir, string outDir)
         {
             var inDirInfo = new DirectoryInfo(inDir);
             var mostActiveTickerDict = GetMostActiveTickerDict();
             var productInfos = TickerHelper.GetGeneralTickerInfosByAdapter("CTP").Select(g => g.ProductInfo).ToArray();
             foreach (var productInfo in productInfos)
             {
+                Logger.Info($"Process {productInfo}");
                 var currentTicker = GetMostActiveTicker(DateTime.Today, productInfo, mostActiveTickerDict);
                 foreach (var dailyDir in inDirInfo.EnumerateDirectories())
                 {

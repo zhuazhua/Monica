@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Platinum.Common.Pocos
+namespace Monica.Common.Pocos
 {
     [Serializable]
     public class GeneralTickerInfo

@@ -37,14 +37,14 @@ namespace Monica.Quant.Strategy
                 var signals = OnBarDatas(pair.Key, pair.Value);
                 SignalDict.Add(pair.Key, signals);
             }
-            return Caculate();
+            return new List<double>();
         }
 
-        public 
-
-        private List<double> Caculate()
-        {
-            throw new NotImplementedException();
-        }
+//        public 
+//
+//        private List<double> Caculate()
+//        {
+//            throw new NotImplementedException();
+//        }
     }
 }

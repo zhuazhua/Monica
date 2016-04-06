@@ -21,6 +21,8 @@ namespace Monica.Quant
 
         public Dictionary<string,double> Args { get; set; }
 
+        public List<string> ProductInfos { get; set; } 
+
         public double InitX { get; set; }
     }
 }

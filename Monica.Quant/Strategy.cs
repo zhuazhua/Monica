@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
+using System.Linq;
 using Monica.Common.Pocos;
 using Monica.Common.Utils;
 
@@ -40,7 +41,8 @@ namespace Monica.Quant
         public void ProcessBarDatas(DateTime time, Dictionary<string, BarData> barDataDict)
         {
             Time = time;
-            OnBarDatas(time, barDataDict);
+            var datas = barDataDict.Where(p=> StrategyConfig.ProductInfos.Contains(TickerHelper.GetProductInfoByTicker(p.Key))).ToDictionary(p=>p.Key,p=>p.Value);
+            OnBarDatas(time, datas);
         }
 
         protected abstract void OnBarDatas(DateTime time, Dictionary<string, BarData> barDataDict);

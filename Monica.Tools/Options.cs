@@ -4,7 +4,7 @@ using System.IO;
 using System.Text;
 using CommandLine;
 using CommandLine.Text;
-using Platinum.Common.Utils;
+using Monica.Common.Utils;
 
 namespace Monica.Tools
 {

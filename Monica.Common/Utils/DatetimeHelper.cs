@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text.RegularExpressions;
 using Monica.Common.Pocos;
 
-namespace Platinum.Common.Utils
+namespace Monica.Common.Utils
 {
     public class DateTimeHelper
     {

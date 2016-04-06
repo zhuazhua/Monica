@@ -12,7 +12,9 @@ namespace Monica.Common.Pocos
         public const string DateFormat = "yyyyMMdd";
         public const string DateTimeFormat = "yyyyMMdd HH:mm:ss";
         public const string TimeFormat = "HH:mm:ss";
-        public const string DoubleFormat = "F3";
+        public const string DoubleFormat = "F4";
+        public const string IntFormat = "D";
+        public const string PercentFormat = "P4";
         public const string HolidayPath = @"Data\Holiday.csv";
         public const string TimeZoneIndexPath = @"Data\TimeZoneIndex.csv";
 

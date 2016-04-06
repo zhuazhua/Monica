@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using log4net;
-using Platinum.Common.Utils;
+using Monica.Common.Utils;
 
 namespace Monica.Common.Pocos
 {

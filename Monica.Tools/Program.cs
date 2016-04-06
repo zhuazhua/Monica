@@ -6,7 +6,6 @@ using CommandLine;
 using log4net;
 using Monica.Common.Pocos;
 using Monica.Common.Utils;
-using Platinum.Common.Utils;
 
 namespace Monica.Tools
 {
@@ -22,7 +21,7 @@ namespace Monica.Tools
                 {
                     switch (options.Action)
                     {
-                        case "GenerateBarData":
+                        case "GenerateBarDatas":
                             GenerateBarDatas(options.InDir, options.OutDir, options.BarSize);
                             break;
                         case "GenerateBackAdjustDatas":

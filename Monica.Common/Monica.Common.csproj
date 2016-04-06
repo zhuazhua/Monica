@@ -51,8 +51,10 @@
     <Compile Include="Pocos\FutureContractInfo.cs" />
     <Compile Include="Pocos\GeneralConstants.cs" />
     <Compile Include="Pocos\GeneralTickerInfo.cs" />
+    <Compile Include="Pocos\LogPoco.cs" />
     <Compile Include="Pocos\SerializablePoco.cs" />
     <Compile Include="Pocos\Signal.cs" />
+    <Compile Include="Pocos\TaskState.cs" />
     <Compile Include="Pocos\TickData.cs" />
     <Compile Include="Pocos\TickerPoco.cs" />
     <Compile Include="Pocos\TradingSession.cs" />
@@ -64,6 +66,7 @@
     <Compile Include="Utils\SerializerHelper.cs" />
     <Compile Include="Utils\ServiceHelper.cs" />
     <Compile Include="Utils\SystemHelper.cs" />
+    <Compile Include="Utils\TaskHelper.cs" />
     <Compile Include="Utils\TickerHelper.cs" />
   </ItemGroup>
   <ItemGroup>

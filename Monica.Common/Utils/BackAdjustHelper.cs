@@ -4,7 +4,6 @@ using System.IO;
 using System.Linq;
 using log4net;
 using Monica.Common.Pocos;
-using Platinum.Common.Utils;
 
 namespace Monica.Common.Utils
 {
